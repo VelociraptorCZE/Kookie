@@ -1,0 +1,24 @@
+{
+  "name": "kookie",
+  "version": "1.0.0",
+  "scripts": {
+    "build:watch": "rollup -c --watch",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.16",
+    "@babel/preset-env": "7.12.16",
+    "rollup-plugin-uglify": "6.0.4",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup": "2.39.0"
+  },
+  "description": "Minuscule library for browser cookie handling.",
+  "authors": [
+    {
+      "name": "Simon Raichl",
+      "homepage": "https://github.com/velociraptorcze"
+    }
+  ],
+  "keywords": ["cookies", "browser cookies", "client cookies"],
+  "license": "MIT"
+}
