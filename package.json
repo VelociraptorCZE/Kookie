@@ -16,7 +16,7 @@
     "mocha": "^8.3.0",
     "chai": "^4.3.0"
   },
-  "description": "Minuscule library for browser cookie handling.",
+  "description": "Minuscule library for browser cookie handling with zero dependencies.",
   "authors": [
     {
       "name": "Simon Raichl",
