@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "scripts": {
     "build:watch": "rollup -c --watch",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "start:test": "http-server -g -p 60061"
   },
   "devDependencies": {
     "@babel/core": "7.12.16",
     "@babel/preset-env": "7.12.16",
     "rollup-plugin-uglify": "6.0.4",
     "rollup-plugin-babel": "4.4.0",
-    "rollup": "2.39.0"
+    "rollup": "2.39.0",
+    "http-server": "^0.12.3",
+    "mocha": "^8.3.0",
+    "chai": "^4.3.0"
   },
   "description": "Minuscule library for browser cookie handling.",
   "authors": [
@@ -19,6 +23,10 @@
       "homepage": "https://github.com/velociraptorcze"
     }
   ],
-  "keywords": ["cookies", "browser cookies", "client cookies"],
+  "keywords": [
+    "cookies",
+    "browser cookies",
+    "client cookies"
+  ],
   "license": "MIT"
 }

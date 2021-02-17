@@ -15,6 +15,7 @@ const get = key => {
 const getAll = () => new Map(
     document.cookie
         .split("; ")
+        .filter(entry => entry)
         .map(keyValuePair => keyValuePair.split("=", 2).map(decodeURIComponent))
 );
 
@@ -46,4 +47,6 @@ const set = (key, value = "", { secure, maxAge, expires, path, sameSite } = {}) 
 
 const remove = key => set(key, "", { maxAge: -1 });
 
-export default { get, getAll, set, remove };
+const removeAll = () => getAll().forEach((_, key) => remove(key));
+
+export default { get, getAll, set, remove, removeAll };
