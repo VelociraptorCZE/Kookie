@@ -1,4 +1,4 @@
-# Kookie
+# Kookie ![](https://img.badgesize.io/velociraptorcze/kookie/master/dist/kookie.min.js.svg?compression=gzip)
 Minuscule library for browser cookie handling with zero dependencies.
 
 ## Get started
