@@ -33,14 +33,14 @@ Kookie.get("some-key");
 - domain: string
 
 ```js
-Kookie.set("someth]ng", "interesting"); // sets a cookie and returns it in a string: "someth%5Dng=interesting;"
+Kookie.set("someth]ng", "intere$ting"); // sets a cookie and returns it in a string: "someth%5Dng=in%24teresting;"
 Kookie.set("temp", "42", { maxAge: 100, path: "/something" }); // sets "temp" cookie with 100 second life span
 ```
 
 ### Kookie.get(key: string): string | null
 
 ```js
-Kookie.get("someth]ng"); // "interesting"
+Kookie.get("someth]ng"); // "in$teresting"
 Kookie.get("something-not-existing"); // null
 ```
 
