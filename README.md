@@ -50,7 +50,7 @@ Kookie.get("something-not-existing"); // null
 Kookie.getAll(); // returns Map with all cookies 
 ```
 
-### Kookie.remove(key): string
+### Kookie.remove(key): string | null
 
 ```js
 Kookie.remove("remove-me"); // removes a cookie with key remove-me
