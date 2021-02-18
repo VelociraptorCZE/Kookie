@@ -1,6 +1,6 @@
 {
   "name": "kookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build:watch": "rollup -c --watch",
     "build": "rollup -c",

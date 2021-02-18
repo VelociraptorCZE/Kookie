@@ -22,7 +22,7 @@ Kookie.get("some-key");
 
 ## Methods
 
-### Kookie.set(key: string, value: string, options: object): string
+### Kookie.set(key: string, value: string, options: object): string | null
 
 #### Options
 - secure: bool
@@ -30,16 +30,17 @@ Kookie.get("some-key");
 - expires: Date
 - path: string
 - sameSite: string
+- domain: string
 
 ```js
-Kookie.set("something", "interesting"); // sets a cookie and returns it in a string
+Kookie.set("someth]ng", "interesting"); // sets a cookie and returns it in a string: "someth%5Dng=interesting;"
 Kookie.set("temp", "42", { maxAge: 100, path: "/something" }); // sets "temp" cookie with 100 second life span
 ```
 
 ### Kookie.get(key: string): string | null
 
 ```js
-Kookie.get("something"); // "interesting"
+Kookie.get("someth]ng"); // "interesting"
 Kookie.get("something-not-existing"); // null
 ```
 

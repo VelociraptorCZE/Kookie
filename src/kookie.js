@@ -5,7 +5,7 @@
  */
 
 const get = key => {
-    const value = document.cookie.split(`${key}=`)[1];
+    const value = decodeURIComponent(document.cookie).split(`${decodeURIComponent(key)}=`)[1];
 
     return typeof value === "string" && key?.length
         ? decodeURIComponent(value.replace(/; .+?$/g, ""))
@@ -19,11 +19,19 @@ const getAll = () => new Map(
         .map(keyValuePair => keyValuePair.split("=", 2).map(decodeURIComponent))
 );
 
-const set = (key, value = "", { secure, maxAge, expires, path, sameSite } = {}) => {
+const set = (key, value = "", { secure, domain, maxAge, expires, path, sameSite } = {}) => {
+    if (!key?.length) {
+        return null;
+    }
+
     let cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)};`;
 
     if (secure) {
-        cookie += "secure;"
+        cookie += "secure;";
+    }
+
+    if (domain) {
+        cookie += `domain=${domain};`;
     }
 
     if (isFinite(maxAge)) {
